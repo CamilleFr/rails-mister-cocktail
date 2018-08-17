@@ -1,10 +1,27 @@
-<h1 ><strong>COCKTAILS</strong></h1>
-<span id="main_title" ></span>
-<ul>
-<% @cocktails.each do |cocktail| %>
-<li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-<% end %>
-</ul>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('file:///Users/Camille/Desktop/te%CC%81le%CC%81chargement.html');">
+  <div class="banner-content">
+    <h1>Miss Cocktails</h1>
+  </div>
+</div>
+<div class="main-container">
+  <span id="main_title" ></span>
+  <div class = "cocktail-container">
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+          <div class="col-xs-12 col-md-4">
+            <div class="card">
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      <div> <i class="fas fa-cocktail" style="margin-left: 38px"></i>
+        <%= link_to "Add cocktail", new_cocktail_path %>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<%= link_to "Add cocktail", new_cocktail_path %>
+
+

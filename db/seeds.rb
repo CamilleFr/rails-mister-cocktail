@@ -30,6 +30,8 @@ cuba_libre = Cocktail.create!(name: "Cuba Libre")
 tequila = Cocktail.create!(name: "Tequila Sunrise")
 mojito = Cocktail.create!(name: "Mojito")
 caipirihna = Cocktail.create!(name: "Caipirinha")
+gin_fizz = Cocktail.create!(name: "Gin fizz")
+jungle_juice = Cocktail.create!(name: "Jungle juice")
 
 p Cocktail.all
 
