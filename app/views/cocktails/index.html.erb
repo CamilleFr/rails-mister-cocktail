@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('file:///Users/Camille/Desktop/te%CC%81le%CC%81chargement.html');">
   <div class="banner-content">
-    <h1>Miss Cocktails</h1>
+    <h1> Cocktails Generator</h1>
   </div>
 </div>
 <div class="main-container">
@@ -9,7 +9,8 @@
       <div class="row">
         <% @cocktails.each do |cocktail| %>
           <div class="col-xs-12 col-md-4">
-            <div class="card">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 100, width: 100, crop: :fill %>')">
               <%= link_to cocktail.name, cocktail_path(cocktail) %>
             </div>
           </div>

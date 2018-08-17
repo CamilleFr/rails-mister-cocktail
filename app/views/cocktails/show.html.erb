@@ -4,6 +4,7 @@
 <ul>
   <strong>Name:</strong>
   <%= @cocktail.name %>
+  <%= cl_image_tag @cocktail.photo %>
   <% @cocktail.doses.each do |dose|  %>
    <li> <%= dose.description %> </li>
    <li> <%= dose.ingredient.name %> </li>
@@ -17,5 +18,5 @@
 <td><%= link_to 'Back', cocktails_path %></td>
 <td><%= link_to 'Edit', edit_cocktail_path %></td>
 <td><%= link_to 'Delete', @cocktail, method: :delete, data: {confirm: 'sure?'} %></td>
-<td><%= link_to 'Add dose', new_cocktail_dose_path(@cocktail.id) %></td>
+<td> <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail) %></td>
 </ul>
